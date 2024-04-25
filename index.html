@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ai-univers-hub</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .font-Work-Sans {
+        font-family: "Work Sans", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="font-Work-Sans">
+    <header>
+      <div class="navbar bg-gray-200 my-2 p-4 ronded-lg">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl">Ai-univers-hub</a>
+        </div>
+        <div class="flex-none gap-2">
+          <div class="form-control">
+            <input
+              id="searchInput"
+              type="text"
+              placeholder="Search..."
+              class="input input-bordered w-24 md:w-auto"
+            />
+          </div>
+          <button
+            id="searchBtn"
+            class="btn btn-accent text-white font-bold text-xl"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="container mx-auto my-2 p-3">
+      <div class="text-center">
+        <h2 class="text-4xl font-bold">Ai-univers-hub</h2>
+        <button
+          id="sortByDate"
+          class="btn btn-info text-white font-bold text-xl my-4"
+        >
+          Sort By Date
+        </button>
+      </div>
+      <section class="p-2 my-3">
+        <div
+          id="toolsContainer"
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"
+        >
+          <!-- <div class="card shadow-xl border border-[#1111111A] p-5">
+            <figure>
+              <img
+                class="rounded-lg relative"
+                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="absolute top-6 right-10 mt-2">
+              <button class="btn btn-info text-white font-bold text-xl">
+                Discount
+              </button>
+            </div>
+          </div> -->
+        </div>
+        <div class="my-5 text-center">
+          <button
+            id="showAllBtn"
+            class="btn btn-success text-white font-bold text-xl hidden"
+          >
+            Show All
+          </button>
+        </div>
+
+        <div id="showModal">
+          <!-- You can open the modal using ID.showModal() method -->
+        </div>
+      </section>
+    </main>
+    <footer class="footer items-center p-4 bg-neutral text-neutral-content">
+      <aside class="items-center grid-flow-col">
+        <i class="fa-brands fa-airbnb text-5xl"></i>
+        <p>Copyright © 2024 - All right reserved</p>
+      </aside>
+      <nav
+        class="grid-flow-col gap-4 md:place-self-center md:justify-self-end text-3xl"
+      >
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </nav>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
