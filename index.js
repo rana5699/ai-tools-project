@@ -8,8 +8,10 @@ const showModal = getElement("showModal");
 const tooName = getElement("tooName");
 const searchBtn = getElement("searchBtn");
 const searchInput = getElement("searchInput");
+const loadingSpiner = getElement("loadingSpiner");
 
 const loadData = async () => {
+  loadingSpiner.classList.remove("hidden");
   const res = await fetch("https://openapi.programming-hero.com/api/ai/tools");
   const data = await res.json();
   const allAiTools = data.data.tools;
@@ -233,6 +235,7 @@ const displayData = (allAiTools) => {
   }
 
   sortByDate.addEventListener("click", () => {
+    toolsContainer.innerHTML = "";
     allAiTools.sort((a, b) => {
       const dateA = new Date(a.published_in);
       const dateB = new Date(b.published_in);
@@ -240,10 +243,10 @@ const displayData = (allAiTools) => {
       return result;
     });
 
-    toolsContainer.innerHTML = "";
     allAiTools.forEach((tool) => {
       createTooCard(tool);
     });
+    showAllBtn.classList.add("hidden");
   });
 
   // handle search function
@@ -262,6 +265,7 @@ const displayData = (allAiTools) => {
     });
     searchInput.value = "";
   });
+  loadingSpiner.classList.add("hidden");
 };
 
 loadData();
